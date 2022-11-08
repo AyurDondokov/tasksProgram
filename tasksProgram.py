@@ -135,6 +135,7 @@ def z9():
         if (z9_check(i)):
             a.append(i)
     print(a)
+    
 def sumArr(a):
     s = 0
     for i in range(0, len(a)):
@@ -163,5 +164,5 @@ def z10():
                 a.append(i)
                 n -= 1
             i += 1
-        return a
-z9()
+        print(a)
+z10()
