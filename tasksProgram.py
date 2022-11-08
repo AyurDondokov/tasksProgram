@@ -95,4 +95,31 @@ def z6():
         s2 = (2 + x-1) * (x // 2) / 2
     print(f"Сумма всех нечетных: {s1}")
     print(f"Сумма всех четных: {s2}")
-z6()
+def z7():
+    x = int(input("Введите X: "))
+    count = 0
+    for j in range(1, int(x ** 0.5) + 1):
+        if x % j == 0:
+            count += 2
+    if float(x ** 0.5) == int(x ** 0.5):
+        count += 1
+
+    print(count)
+
+def isSquare(x):
+    s = int(sqrt(x))
+    return (s * s == x)
+def z8():
+    n = int(input("Введите N: "))
+    m = int(input("Введите M: "))
+    a = []
+    for i in range(n, m):
+        for j in range(i+1, m+1):
+            if (isSquare(i*i+j*j)):
+                c = sqrt(i*i+j*j)
+                if (c <= m):
+                    a.append([i, j, int(c)])
+    print(a)
+def z9():
+    
+z8()
