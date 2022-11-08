@@ -120,6 +120,48 @@ def z8():
                 if (c <= m):
                     a.append([i, j, int(c)])
     print(a)
+
+def z9_check(l):
+    n = len(str(l))
+    for i in range(0, n):
+        if int(str(l)[i]) == 0 or l % int(str(l)[i]) != 0:
+            return False
+    return True
 def z9():
-    
-z8()
+    n = int(input("Введите N: "))
+    m = int(input("Введите M: "))
+    a = []
+    for i in range(n, m+1):
+        if (z9_check(i)):
+            a.append(i)
+    print(a)
+def sumArr(a):
+    s = 0
+    for i in range(0, len(a)):
+        s += a[i]
+    return s
+
+def getDivinders(n):
+    a = []
+    a.append(1)
+    i = 2
+    while (i*i <= n):
+        if (n % i == 0):
+            a.append(i)
+            if (n/i != i):
+                a.append(n/i)
+        i += 1
+    return a
+
+def z10():
+    n = int(input("Введите N: "))
+    if (n < 5):
+        a = []
+        i = 2
+        while (n > 0):
+            if (sumArr(getDivinders(i)) == i):
+                a.append(i)
+                n -= 1
+            i += 1
+        return a
+z9()
