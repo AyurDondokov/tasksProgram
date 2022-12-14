@@ -165,4 +165,31 @@ def z10():
                 n -= 1
             i += 1
         print(a)
-z10()
+    else:
+        print("N должно быть меньше 5")
+        z10()
+
+def z11():
+    array = [0, 0, 1]
+    print(array[len(array)-1])
+    print(array[-1])
+    last = None
+    for i in array:
+        last = i
+    print(last)
+
+def z12():
+    array = ["наоборот", "идёт", "список", "этот"]
+    for i in range(1, len(array)+1):
+        print(array[-i])
+
+
+def z13(array):
+    if len(array) == 1:
+        return array[0]
+    else:
+        return array[0] + z13(array[1:])
+
+
+array = [1,2,3]
+print(z13(array))
